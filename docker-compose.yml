@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  nexus3-repo:
+    # restart: always
+    build: 
+      context: .
+      args:
+        dockergroupid: ${DOCKER_GROUP_ID}
+    image: gtunon/nexus3:beta
+    container_name: nexus
+    ports:
+     - 8081:8081
+    volumes: 
+       # configuration volumes
+       # log volumes
+       # repository volume
+       - /opt/containers/nexus-data:/nexus-data:rw
+
+
+    
