@@ -7,10 +7,12 @@ services:
       context: .
       args:
         dockergroupid: ${DOCKER_GROUP_ID}
+        
     image: gtunon/nexus3:beta
     container_name: nexus
     ports:
-     - 8081:8081
+     - 8083:8081
+
     volumes: 
        # configuration volumes
        # log volumes
